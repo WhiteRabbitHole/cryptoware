@@ -1,13 +1,30 @@
-- GPU reached STOP temperature - Fan Speed 0% 
+PROBLEMS AND FIXES
 
-log:
-10:59:14:114	dc0	GPU #0 reached STOP temperature (85 >= 85), stop mining on this GPU.
-10:59:27:538	f90	GPU 0 mining was stopped because -tstop temperature reached.
-stats:
-GPU0 t=82C  fan=0%
+I will update this list with more problems and solutions.
 
-solution:
-- open Sapphire TRIXX do fan check (decrease temperature)
-- restart OS
-- check log and stat
+- GPU reached STOP temperature and Fan Speed 0% 
+log: 10:59:14:114	dc0	GPU #0 reached STOP temperature (85 >= 85), stop mining on this GPU.	
+                  f90	GPU 0 mining was stopped because -tstop temperature reached.
+stats: GPU0 t=82C  fan=0%
+Open Sapphire TRIXX and do fan check
+Restart OS
+Check log and claymore statistics
 
+- GPU not recognized by atiflash
+Uninstall drivers with latest version of DDU in safe mode.
+Install latest mining edition drivers
+Download latest Atiflash 2.77 and try again
+Also try to backup via CMD and apply the patch
+
+- Exclamation mark in device manager after rig reboot
+Apply the patch and restart
+
+- Flashing BIOS error message
+If you get that while trying to flash the bios via atiflash gui, try again via CMD with –f –p
+If you still get the same error message switch BIOS jumpers to the other side and try again (you can do it without restarting the rig)
+
+- Empty Backup BIOS – 0 KB BIOS Size
+For some reason, the silent BIOS version that was saved by atiflash resulted in a 0 KB file. I was able to backup it with GPUz and getting a full-sized back-up with a size of 256 KB. You can also try to backup via CMD using –s command (I missed that)
+
+- Claymore no AMD or CUDA GPU detected
+Apply the patch and restart the rig
