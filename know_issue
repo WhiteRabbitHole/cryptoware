@@ -1,0 +1,13 @@
+- GPU reached STOP temperature - Fan Speed 0% 
+
+log:
+10:59:14:114	dc0	GPU #0 reached STOP temperature (85 >= 85), stop mining on this GPU.
+10:59:27:538	f90	GPU 0 mining was stopped because -tstop temperature reached.
+stats:
+GPU0 t=82C  fan=0%
+
+solution:
+- open Sapphire TRIXX do fan check (decrease temperature)
+- restart OS
+- check log and stat
+
