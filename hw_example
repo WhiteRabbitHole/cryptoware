@@ -2,45 +2,46 @@ GPU:
 - SAPPHIRE NITRO+ Radeon RX 580 8GD5 Special Edition
 - SAPPHIRE NITRO+ Radeon RX 580 8GD5 OC (Hynix)
 - SAPPHIRE NITRO+ Radeon RX 570 8GD5 OC (Micron) 
+MOBO: MSI Z270-A PRO LGA 1151
+CPU: Intel Celeron G3900 Processor
+RAM: Kingston 4GB DDR4 2400
+SSD: SanDisk Plus 120GB
+RISER: USB 3.0 PCI-E Express 1x To 16x Extender Riser Card Adapter
+PSU: CORSAIR/EVGA 750W GOLD Modular
+PSU ADAPTER: Add2PSU Multiple Power Supply Adapter
+POWER BUTTON:
+SMART PLUG/POWER METER: TP-LINK Smart Plug Wi-Fi HS110
 
-RISER:
-- USB 3.0 PCI-E Express 1x To 16x Extender Riser Card Adapter
+=== EPRICE === 
 
-MOBO:
-- MSI Z270-A PRO LGA 1151
-- ASRock H81 PRO BTC R2.0 LGA 1150 
+[x] 1 MOBO: MSI Z270-A PRO LGA 1151 - https://www.eprice.it/schede-madri-MSI/d-9694076 - 105,99
+[x] 1 CPU:  Intel Celeron G3900 Processor - https://www.eprice.it/processori-INTEL/d-9734913 - 33,99EUR
+[x] 1 RAM:  Kingston Technology HyperX FURY 2400MHz DDR4  - https://www.eprice.it/memoria-ram-KINGSTON/d-8483779 - 51,14
+[x] 1 SSD:  SanDisk SSD PLUS 120GB https://www.eprice.it/ssd-SANDISK/d-11157451 -  44,99
+[]  2 PSU: N/A
+[]  1 Dual PSU Adapter: N/A
+[]  1 Power Button: N/A
+[]  6 RISER: N/A
+[x] 1 Smart Plug/Power Meter: TP-LINK Smart Plug Wi-Fi HS110 - https://www.eprice.it/smart-plug-TP-LINK/d-8412562 - 8,54
 
-CPU:
-- Intel Celeron G3900 Processor
-- Intel Celeron G1840 Processor
+Tot. 244.65 EUR -> 286.46 CHF
 
-RAM:
-- Kingston 4GB DDR4 2400
-- Kingston HyperX Fury 4GB 1333MHz DDR3
+=== AMAZON ===
 
-SSD:
-- SanDisk Plus 120GB
+[]  1 MOBO: N/A - MSI Z270-A PRO LGA 1151  - https://www.amazon.com/MSI-Intel-CrossFire-Motherboard-Z270/dp/B01MR31OZ8 - 106.99$
+[]  1 CPU: Intel Celeron G3900 Processor - https://www.amazon.com/Intel-BX80662G3900-Celeron-2-80Ghz-LGA1151/dp/B01B2PJRPA - $36.35
+[]  1 SSD: SanDisk SSD PLUS 120GB https://www.amazon.com/SanDisk-120GB-Solid-State-Drive/dp/B01F9G414U - 58.99$
+[]  1 RAM: Kingston Technology HyperX FURY 2400MHz DDR4 - https://www.amazon.com/Kingston-Technology-HyperX-PC4-19200-HX424C15FB/dp/B013H7U6FQ - 50.99$
+[x] 6 RISER: Ver 006c PCI-E 1X To 16X Riser Card 164P With 6 Pin To SATA Power Supply USB 3.0 - https://www.amazon.com/Panto-6-Pin-Powered-Express-Riser/dp/B01MR22J4G - 59.99$
+[x] 2 PSU: EVGA SuperNOVA G3 750W Modular - https://www.amazon.com/EVGA-SuperNOVA-Modular-Warranty-220-G3-0750-X1/dp/B005BE058W - 109.99$
+[x] 1 Dual PSU Adapter: Dual Psu Cable 24 Pin - https://www.amazon.com/Prosperous-World-Mining-Extension-Motherboards/dp/B075FMY4BT - 6.99$
+[x] 1 Power Button: 2 Pin SW PC Power Cable on/off Push Button ATX Computer Switch Wire 45cm - https://www.amazon.com/Electop-Power-Button-Computer-Switch/dp/B01LMZZFWO - 5.29$
+[]  1 Smart Plug/Power Meter: https://www.amazon.com/TP-Link-Monitoring-Required-Assistant-HS110/dp/B0178IC5ZY - 29.99$
 
-PSU:
-- CORSAIR/EVGA 750W GOLD
+Tot. 292.25$ - > 275.69 CHF
 
-PSU ADAPTER:
-- Add2PSU Multiple Power Supply Adapter
+============
 
-Motherboard: 
-CPU: Intel Celeron G1840 Processor
-RAM: Kingston HyperX Fury 4GB 1333MHz DDR3
+Tot. (EPRICE+AMAZON) : 562.15 CHF
 
-Example:
-
-GPU: Sapphire Radeon NITRO+ RX 580 8GB LIMITED EDITION 11265-00-40G
-Motherboard: ASRock H81 PRO BTC R2.0 LGA 1150
-CPU: Intel Celeron G1840 Processor
-RAM: Kingston HyperX Fury 4GB 1333MHz DDR3
-SSD: SanDisk SSD PLUS 120GB
-PSU: 2x EVGA SuperNOVA 750 G2, 80+ GOLD 750W, Fully Modular or EVGA SuperNOVA 750 G3
-Dual PSU Adapter: Add2PSU Multiple Power Supply Adapter
-USB Risers: Ver 006c PCI-E 1X To 16X Riser Card 164P With 6 Pin To SATA Power Supply USB 3.0
-Power Button: 2 Pin SW PC Power Cable on/off Push Button ATX Computer Switch Wire 45cm
-Energy Meter: TP-Link HS110 Smart Plug w/ Energy Monitoring
-Frame: Open case
+[x] 1 Open Case ???CHF
