@@ -1,6 +1,4 @@
 
-Here is how i tweak my windows for a mining rig!
-
 WINDOWS INSTALLATION & CONFIGURATION FOR MINING RIG
 Important:
 
@@ -169,6 +167,10 @@ EthDcrMiner64.exe -epool pirl-pool.com:8002 -eworker rig1 -ewal 0x00000000000000
 (replace details with yours)
 
 save,close and run start.bat
+
+EOF
+===
+
 
 COMMENTS:
 Ti • 7 months ago
