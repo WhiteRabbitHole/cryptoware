@@ -170,7 +170,7 @@ EthDcrMiner64.exe -epool pirl-pool.com:8002 -eworker rig1 -ewal 0x00000000000000
 
 save,close and run start.bat
 
-==================
+COMMENTS:
 Ti • 7 months ago
 Hi again guys!
 I was working around to figure out how to make this new beta driver (one with "DAG issue" fix) work stable, 
