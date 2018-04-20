@@ -1,0 +1,208 @@
+
+Here is how i tweak my windows for a mining rig!
+
+WINDOWS INSTALLATION & CONFIGURATION FOR MINING RIG
+Important:
+
+Do not plug the Ethernet cable to your mining rig while windows installation or after that
+Plug only ONE GPU in the PCI Express 16x slot with usb riser
+I have always used 120GB SSD drives (you can use bigger, there is no restriction)
+Always used just one partition C: 
+
+WINDOWS VERSION FOR MINING RIG:
+- Microsoft Windows 10 Pro 64 Bit
+
+MOTHERBOARD AND BIOS
+Depending on what motherboard you will be using, some of them needs some BIOS modifications 
+to make it work properly with USB Risers or anything else. 
+For this, i will take as example “Z270A  Pro ” (https://www.msi.com/Motherboard/Z270-A-PRO.html)
+
+
+FLASHING THE MOTHERBOARD WITH THE OFFICIAL 1.7 BIOS PATCH
+- First of all, you’d need to download the latest official firmware upgrade from here:
+https://www.msi.com/Motherboard/support/Z270-A-PRO#down-bios
+https://www.msi.com/Motherboard/support/Z270-A-PRO#down-driver&Win10%2064
+-  Unzip it into the root of a USB drive.
+- Unplug all the GPUs from the board and leave only the HDMI cable and the USB drive plugged into it, as well as the keyboard/mouse.
+-  Once you turn the PC on, go to the BIOS and press F7 for advanced settings. Once there, go to M-Flash (bottom left side of the screen); you will be asked to confirm whether you want the system to reboot and enter Flash mode. Click on yes and wait for the system to reboot.
+-  You will see an M-Flash screen that will ask you to choose the file containing the firmware. Locate it in your pen drive (File name: E7A12IMS.170), select it and confirm selection.
+- After you do that, wait for the BIOS to update.
+- Now, go to the BIOS, Settings -> Advanced -> PCI Subsystem Settings
+Change ‘PEG0’ and ‘PEG1’ values to ‘Gen1’
+Set ‘Above 4G Decoding’ to ‘Enabled’
+
+- That’s all you have to do. Leave the other settings unchanged; save the settings and plug in the extended USB risers 
+and the HDMI cable to the graphics card.
+- You’re all set now. Verify whether your mining software detects all your GPUs. 
+If it doesn’t then you might try the second unofficial method of patching your motherboard.
+
+WINDOWS 10 REGISTRY TWEAKS FOR MINING
+- Once windows is full installed and booted for the first time i always run the Windows 10 Registry tweaks for mining.bat file 
+https://mega.nz/#!8gZzjQaa!Dt4wE0WEo8nZkui_-cAAXL4mb4YlO6CJgFZTXKq9pnQ 
+(i am not disabling everything, just things that i think wont be needed, windows update, cortana, crash reports etc..)
+- Back Up Your Registry or create a restore point
+- Run in administrator mode
+- Once everything is applied, restart the rig
+
+List of Tweaks:
+Replace Utilman with CMD
+Disable Cortana, Bing Search and Searchbar
+Disable automatic Windows Updates
+Disable Hibernation
+Disable tracking services
+Disable WAP Push Message Routing Service
+Disable Windows Search
+Disable Superfetch
+Disable Windows Defender
+Disable OneDrive
+Disable Quick Access as default view in Explorer
+show computer shortcut on desktop
+Show file extensions
+Disable lockscreen
+Enable classic control panel view
+Hide indication for compressed NTFS files
+Disable Windows Update sharing
+Remove Pin to start
+Classic vertical icon spacing
+Remove versioning tab from properties
+Disable jump lists
+Remove telemetry and data collection
+Change Logon screen background with accent color
+Disable Windows Error Reporting
+Removing Windows default apps
+Blocking Telemetry Servers
+
+STOP WINDOWS UPDATE #DOUBLECHECK
+- In RUN type “services.msc“, the services page will be open
+- Search for “Windows Update“
+- Click “Stop” if status is “Live” or “Checking/Running“
+- Select “Disabled” on “Startup type“
+- Apply & Restart
+- Do it again and make sure that it is disabled
+- Also if you want you can disable more services..
+
+Rif. http://1stminingrig.com/best-windows-setup-configuration-tweaks-for-mining/
+
+==================
+
+TOOLS AND SOFTWARE USED:
+- Windows 10 (https://www.microsoft.com/en-us/software-download/windows10 - Create Windows 10 installation media - USB flash drive)
+- Blackbird (http://www.getblackbird.net/download/)
+- Display Driver Uninstaller (DDU) (http://www.guru3d.com/files-details/display-driver-uninstaller-download.html)
+- Combined AMD Drivers ( AMD Drivers 17.5.2 Non-WHQL-Win10-64Bit-Radeon-Software-Crimson-ReLive-17.5.2-May17 & AMD Drivers 16.11.5 Non-WHQL-Win10-64Bit-Radeon-Software-Crimson-16.11.5-Nov25)
+- AMD/ATI Pixel Clock Patcher (https://www.monitortests.com/forum/Thread-AMD-ATI-Pixel-Clock-Patcher)
+- ATIFlash 2.74 (https://www.techpowerup.com/download/ati-atiflash/)
+- GPU-Z (https://www.techpowerup.com/download/techpowerup-gpu-z/)
+- Claymore.s.Dual.Ethereum.Decred_Siacoin_Lbry_Pascal.AMD.NVIDIA.GPU.Miner.v10.0 
+- TeamViever 13
+- Wireshark
+- stratum proxy
+
+1. Clean PC from previous Drivers
+Run DDU and select to uninstall current drivers in safe mode
+2. Extract Drivers
+Run 17.5.2 driver file and extract the files, skip the installation
+Run 16.11.5 driver file and extract the files, skip the installation
+
+3. Copy drivers
+Once extracted both driver versions, go to extracted files of driver version 16.11.5 C:\AMD\Non-WHQL-Win10-64Bit-Radeon-Software-Crimson-16.11.5-Nov25\Packages\Drivers\Display\WT6A_INF\B309089 and copy everything
+Then go to driver version 17.5.2 C:\AMD\Non-WHQL-Win10-64Bit-Radeon-Software-Crimson-ReLive-17.5.2-May17\Packages\Drivers\Display\WT6A_INF\B314330 and paste the files that you just copied from 16.11.5
+
+4. Installing mixed drivers
+Go to “Device Manager“
+Right click on any GPU from “Display Adapter” tab then click on “Update Driver Software“
+Choose “Browse my computer for driver software“
+Select the WTA6A_INF folder from 17.5.2 driver version “C:\AMD\Non-WHQL-Win10-64Bit-Radeon-Software-Crimson-ReLive-17.5.2-May17\Packages\Drivers\Display\WT6A_INF” and click “Next“
+Wait for a few seconds to install the driver
+If you get a Windows security warning just click on “Install this drivers software anyway
+
+!!!DON'T RESTART!!!
+
+5. Apply the patch: AMD/ATI Pixel Clock Patcher
+
+IMPORTANT: Before starting to make any bios modification, install and combine AMD Drivers and do not restart, start atikmdag-patcher.exe and apply the patch (if needed), 
+after this you can restart the pc. If you don’t this the GPUs wont work with the new modded bios flashed.
+
+6.  GPU BIOS mod/flash & tools
+- Backup/Save original Default BIOS:
+ Shut down your rig
+ Remove all the GPUs and leave only one plugged, my recommendation is to flash the cards one by one
+ Start the rig and Extract ATIFlash 2.74 to C: in a folder like “atiflash“
+ Run ATIWinflash.exe as administrator, click on “Save” button to save the default BIOS (make sure the RX 580 card is selected), give it a name like Sapphire580defaultBIOS.rom
+ Click “ok” and “continue“
+ Once the BIOS is saved close ATIFlash
+
+- Silent BIOS switch:
+ Shutdown your rig again
+ Switch BIOS to silent mode (towards the HDMI cable side)
+ Start the rig
+ Backup “Silent” BIOS 
+ Save original Silent BIOS
+ Open ATIWinflash.exe as administrator
+ Save the BIOS again, this time give it a name like Sapphire580silentBIOS.rom
+
+- Download BIOS (Important, this BIOS is for Hynix memory only! Check your memory with GPUz software)
+ (https://mega.nz/540b41de-bf1e-4765-bb6d-71433b517cac - SapphireRX580+Nitro(Hynix)MOD.rom)
+
+- Flash the BIOS with ATIFlash 2.74
+
+  VERY IMPORTANT: Always extract ATIflash to C:/atiflash folder and place the ROM file that needs to be flashed in the same directory
+
+ Start ATIFlash 2.74
+ Load the image SapphireRX580+Nitro(Hynix)MOD.rom
+ Click on “Program” button
+ Wait about 30-60 seconds till you get the message “Your VBIOS was programmed successfully“, click OK
+ Restart the rig and test
+
+- Claymore 10.0 + underclock + undervolt
+Download and extract Claymore miner
+Right click on start.bat fileand click “Edit“
+Paste the following code:
+
+setx GPU_FORCE_64BIT_PTR 0
+setx GPU_MAX_HEAP_SIZE 100
+setx GPU_USE_SYNC_OBJECTS 1
+setx GPU_MAX_ALLOC_PERCENT 100
+setx GPU_SINGLE_ALLOC_PERCENT 100
+EthDcrMiner64.exe -epool pirl-pool.com:8002 -eworker rig1 -ewal 0x000000000000000 -epsw x -dpool stratum+tcp://dcr.suprnova.cc:3252 -dwal USER.rig1 -dpsw x -allpools 1 -etha 0 -dcri 33 -r 60 -tstop 85 -tt 65 -fanmin 40 -fanmax 100 -cclock 1200 -mclock 2250 -cvddc 970 -mvddc 950
+
+(replace details with yours)
+
+save,close and run start.bat
+
+==================
+Ti • 7 months ago
+Hi again guys!
+I was working around to figure out how to make this new beta driver (one with "DAG issue" fix) work stable, 
+run without memory controller errors, use less power and keep temp on ~50 degrees. And finally I've found sweet spot :)
+
+THIS IS ONLY FOR BETA DRIVER!
+THIS IS ONLY FOR HYNIX MEMORY!
+
+256 kb ROM:
+https://mega.nz/#!43xRHaaa!...
+
+512 kb ROM:
+https://mega.nz/#!5uwFBASK!...
+
+Only difference from my previous rom is lower clocks - 1100/2100 (prev. 1150/2150). 
+Yeah, this is the only way... (that I've found after 48 hours testing...).
+
+PLEASE NOTICE! DO NOT MODIFY CLOCKS IN MSI AB OR VIA MINER!
+
+Target clocks and voltage need to be flashed in bios. 
+This is because when you set clocks to any other values than stored in bios using MSI Afterburner (4.4.0 beta 15 works fine with beta driver) or via miner, 
+driver will reset voltage settings to defaults. 
+So you'll get power consumption on GPU = 135-140W (from wall = even higher), and temp about 65 degrees. Beta driver, so...
+
+Results with 6 GPU rig (ETH-Only mode):
+178 mH/s
+~90w on GPU
+0 memory controller errors
+~2.5 shares/minute (ethermine.org)
+
+To say the true, although hashrate is 178, final outcome is the same to prev., 
+when I was using official driver and set 1200/2200 clocks for core and mem, and had 175 mH/s on 137 epoch. 
+It was about 2.5 shares per minute....
+
+If any of you guys figure out how to get better results, please, share with others.
